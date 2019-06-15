@@ -8,9 +8,9 @@ services:
      - "9100:9101"
      - "9300:9301"
     environment:
-      IQFEED_PRODUCT_ID: "CHANGEME"
-      IQFEED_LOGIN: "CHANGEME"
-      IQFEED_PASSWORD: "CHANGEME"
+      IQFEED_PRODUCT_ID: "${DTN_PRODUCT_ID}"
+      IQFEED_LOGIN: "${DTN_ID}"
+      IQFEED_PASSWORD: "${DTN_PW}"
     volumes:
       - /var/log/iqfeed:/home/wine/DTN/IQFeed      
     healthcheck:
